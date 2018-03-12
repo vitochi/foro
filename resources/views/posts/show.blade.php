@@ -8,4 +8,15 @@
 
 	<p>{{ $post->user->name }}</p>
 
+	<h4>Comentarios</h4>
+
+	{!! Form::open(['route' =>['comments.store', $post], 'method' => 'POST']) !!}
+
+			{!! Field::textarea('comment') !!}
+
+			<button type="submit">
+					Publicar Comentario
+			</button>
+
+	{!! Form::close() !!}
 @endsection
